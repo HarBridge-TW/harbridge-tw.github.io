@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公司網站簡版</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 導覽列 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">公司名稱</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">公司介紹</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">產品</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero 大圖 -->
+<header class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4">歡迎來到我們的公司</h1>
+    <p class="lead">專業 · 創新 · 值得信賴</p>
+  </div>
+</header>
+
+<!-- 公司介紹 -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">公司介紹</h2>
+    <p>
+      我們是一家致力於提供優質產品與服務的企業，擁有多年業界經驗，客戶遍佈全國。<br>
+      團隊由專業人才組成，從產品設計、生產、銷售到售後服務，提供全方位支援。
+    </p>
+  </div>
+</section>
+
+<!-- 產品展示 -->
+<section id="products" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4">產品展示</h2>
+    <div class="row">
+      <!-- 產品卡片 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="產品1">
+          <div class="card-body">
+            <h5 class="card-title">產品名稱 1</h5>
+            <p class="card-text">這是我們的熱門產品，具有高效能與穩定性，廣泛應用於多個產業。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 產品卡片 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="產品2">
+          <div class="card-body">
+            <h5 class="card-title">產品名稱 2</h5>
+            <p class="card-text">最新推出的產品，採用先進技術，提供更好的效率與耐用性。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 產品卡片 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="產品3">
+          <div class="card-body">
+            <h5 class="card-title">產品名稱 3</h5>
+            <p class="card-text">專為客製化需求打造，可根據客戶要求進行彈性調整。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 聯絡表單 -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">聯絡我們</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">姓名</label>
+        <input type="text" class="form-control" id="name" placeholder="請輸入您的姓名">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">電子郵件</label>
+        <input type="email" class="form-control" id="email" placeholder="example@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">留言內容</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="請輸入您的訊息"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">送出</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p class="mb-0">© 2025 公司名稱. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

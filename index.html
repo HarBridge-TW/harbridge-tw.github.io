@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公司網站簡版</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 導覽列 -->
+<style>
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+  }
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    color: #ffd700;
+  }
+  .navbar-dark .navbar-nav .nav-link.active {
+    color: #ffeb3b;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand" href="#">漢橋工業有限公司</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">公司介紹</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">產品</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero 大圖 -->
+<header class="text-center">
+ <img src="center.png" alt="背景圖" class="img-fluid w-100">
+   <!-- <h1 class="display-4">漢橋工業有限公司</h1>
+    <p class="lead">HarBridge Industrial, Ltd.</p> --> <!--暫時不用-->
+</header>
+
+<!-- 公司介紹 -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">公司介紹</h2>
+    <p>
+      我們是一家致力於提供優質產品與服務的企業，擁有多年業界經驗，客戶遍佈全國。<br>
+      團隊由專業人才組成，從產品設計、生產、銷售到售後服務，提供全方位支援。
+    </p>
+  </div>
+</section>
+
+<!-- 產品展示 -->
+<section id="products" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4">產品展示</h2>
+    <div class="row">
+      <!-- 產品卡片 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="model1.jpg" class="card-img-top" alt="產品1">
+          <div class="card-body">
+            <h5 class="card-title">產品名稱 1</h5>
+            <p class="card-text">這是我們的熱門產品，具有高效能與穩定性，廣泛應用於多個產業。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 產品卡片 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="產品2">
+          <div class="card-body">
+            <h5 class="card-title">產品名稱 2</h5>
+            <p class="card-text">最新推出的產品，採用先進技術，提供更好的效率與耐用性。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 產品卡片 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="產品3">
+          <div class="card-body">
+            <h5 class="card-title">產品名稱 3</h5>
+            <p class="card-text">專為客製化需求打造，可根據客戶要求進行彈性調整。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 聯絡表單 -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">聯絡我們</h2>
+    <div class="row">
+      <!-- 聯絡資訊 -->
+      <div class="col-md-4 mb-4">
+        <h5>聯絡資訊</h5>
+        <p><strong>電話：</strong><a href="tel:+886423353009"> 04 2335009</a></p>
+        <p><strong>電子郵件：</strong><a href="mailto:twparts@bridgeportmt.com">twparts@bridgeportmt.com</a></p>
+        <p><strong>地址：</strong>臺中市烏日區溪南路一段126巷163號</p>
+      </div>
+
+      <!-- 地圖 -->
+      <div class="col-md-8">
+        <h5>公司位置</h5>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.46194006436!2d120.63840197563194!3d24.085245378443407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693bf56d0565c9%3A0x2171ad14859334ef!2zNDE05Y-w5Lit5biC54OP5pel5Y2A5rqq5Y2X6Lev5LiA5q61MTI25be3MTYz6Jmf!5e0!3m2!1szh-TW!2stw!4v1759590839863!5m2!1szh-TW!2stw"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p class="mb-0">© 2025 HarBridge Industrial, Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

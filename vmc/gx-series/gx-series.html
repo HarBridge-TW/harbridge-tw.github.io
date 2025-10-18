@@ -21,6 +21,21 @@
     .btn-nav {
       width: 100px;
     }
+
+   /* 這是新增的手機版 CSS */
+    @media (max-width: 576px) {
+      .d-flex {
+        flex-direction: column !important;
+      }
+      .btn-nav {
+        width: 80%;
+        margin: 0.5rem auto;
+      }
+      .catalog-img {
+        max-height: 400px;
+        width: auto;
+      }
+    }
   </style>
 </head>
 

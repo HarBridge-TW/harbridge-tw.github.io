@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>5AX Machining center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <!-- 加這行引入 Bootstrap JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .catalog-img {
+      max-width: 100%;
+      max-height: 600px;
+      object-fit: contain;
+      margin: 0 auto;
+      display: block;
+      cursor: pointer; /* 鼠標變手型，提示可點 */
+    }
+    .btn-nav {
+      width: 100px;
+    }
+
+   /* 這是新增的手機版 CSS */
+    @media (max-width: 576px) {
+      .d-flex {
+        flex-direction: column !important;
+      }
+      .btn-nav {
+        width: 80%;
+        margin: 0.5rem auto;
+      }
+      .catalog-img {
+        max-height: 400px;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 導覽列 -->
+<style>
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+  }
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    color: #ffd700;
+  }
+  .navbar-dark .navbar-nav .nav-link.active {
+    color: #ffeb3b;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#000000;">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="../title.png" alt="Logo" style="height:60px;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About us</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#products">Product</a></li>
+	<li class="nav-item"><a class="nav-link" href="../index.html#industries">Industries</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- 簡易型 -->
+<div class="container py-4">
+  <h1 class="text-center mb-4">5AX Machining center</h1>
+
+  <div class="d-flex justify-content-center align-items-center">
+    <button id="prevBtn" class="btn btn-danger btn-nav me-3">← 上一頁</button>
+
+    <img id="catalogImage" class="catalog-img" src="pages/xt-630-5ax-page1.jpg" alt="型錄頁面" />
+
+    <button id="nextBtn" class="btn btn-danger btn-nav ms-3">下一頁 →</button>
+  </div>
+
+  <div class="text-center mt-3">
+    <a href="../index.html" class="btn btn-secondary">← 回首頁</a>
+  </div>
+</div>
+
+<!-- Modal HTML 放這裡 -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img src="" id="modalImage" class="img-fluid" alt="放大圖片" />
+      </div>
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function(){
+    const pages = [
+      'pages/xt-630-5ax-page1.jpg',
+      'pages/xt-630-5ax-page2.jpg',
+      'pages/xt-630-5ax-page3.jpg',
+      'pages/xt-630-5ax-page4.jpg'
+    ];
+
+    let currentIndex = 0;
+
+    function showPage(index){
+      if(index < 0) index = 0;
+      if(index >= pages.length) index = pages.length - 1;
+      currentIndex = index;
+      $('#catalogImage').attr('src', pages[currentIndex]);
+    }
+
+    $('#prevBtn').click(function(){
+      if(currentIndex > 0){
+        showPage(currentIndex - 1);
+      }
+    });
+
+    $('#nextBtn').click(function(){
+      if(currentIndex < pages.length - 1){
+        showPage(currentIndex + 1);
+      }
+    });
+
+    // 點擊圖片打開 Modal 放大
+    $('#catalogImage').click(function(){
+      let src = $(this).attr('src');
+      $('#modalImage').attr('src', src);
+      let modal = new bootstrap.Modal(document.getElementById('imageModal'));
+      modal.show();
+    });
+  });
+</script>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p class="mb-0">© 2025 HarBridge Industrial, Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
